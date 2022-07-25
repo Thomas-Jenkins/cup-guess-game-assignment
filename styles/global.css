@@ -33,3 +33,30 @@ footer {
     justify-content: flex-end;
     background-color: var(--footer-background);
 }
+/* My code after */
+.intro {
+    display: flex;
+    height: 50px;
+    width: 500px;
+    justify-content: center;
+}
+.game-board {
+    display: grid;
+    height: 500px;
+    width: 500px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.cup {
+    display: grid;
+    width: 100px;
+    height: 150px;
+    border: 2px solid black;
+    justify-items: center;
+    align-items: center;
+}
+.guess {
+    display: grid;
+    position: absolute;
+    width: 90px;
+    height: 140px;
+}
