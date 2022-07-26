@@ -21,7 +21,7 @@ header {
 }
 
 main {
-    padding: 20px;
+    padding: 20px; 
 }
 
 footer {
@@ -40,11 +40,18 @@ footer {
     width: 500px;
     justify-content: center;
 }
+.main-board {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
 .game-board {
     display: grid;
-    height: 500px;
+    height: 250px;
     width: 500px;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
 }
 .cup {
     display: grid;
@@ -59,4 +66,17 @@ footer {
     position: absolute;
     width: 90px;
     height: 140px;
+}
+.guess {
+    display: grid;
+    border: none;
+    background-color: aquamarine; 
+}
+.score-card {
+    display: grid;
+    border: 1px solid black;
+    width: 200px;
+    height: fit-content;
+    align-content: center;
+    justify-items: center;
 }
