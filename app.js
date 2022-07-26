@@ -45,8 +45,6 @@ function getRandomCup() {
 function checkGuess(answer, userGuess) {
     total++;
     totalEl.textContent = total;
-    
-    
     if (answer === cups[0]) {
         ballOne.classList.remove('hidden');
     } else if (answer === cups[1]) {
@@ -54,7 +52,6 @@ function checkGuess(answer, userGuess) {
     } else if (answer === cups[2]) {
         ballThree.classList.remove('hidden');
     }
-    
     if (answer === userGuess) {
         correct++;
         correctEl.textContent = correct;
@@ -62,7 +59,6 @@ function checkGuess(answer, userGuess) {
         wrong++;
         wrongEl.textContent = wrong;
     }
-    
 }
 
 
@@ -103,4 +99,7 @@ buttonReset.addEventListener('click', () => {
     endCupTwo.classList.add('hidden');
     startCupThree.classList.remove('hidden');
     endCupThree.classList.add('hidden');
+    ballOne.classList.add('hidden');
+    ballTwo.classList.add('hidden');
+    ballThree.classList.add('hidden');
 });
