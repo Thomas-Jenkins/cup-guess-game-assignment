@@ -55,8 +55,8 @@ footer {
 }
 .cup {
     display: grid;
-    width: 100px;
-    height: 150px;
+    width: 200px;
+    height: 250px;
     border: 2px solid black;
     justify-items: center;
     align-items: center;
@@ -64,14 +64,14 @@ footer {
 .guess {
     display: grid;
     position: absolute;
-    width: 90px;
-    height: 140px;
-}
-.guess {
-    display: grid;
+    width: 180px;
+    height: 230px;
     border: none;
-    background-color: aquamarine; 
+    background-color: aquamarine;
+    align-items: center;
+    justify-items: center;
 }
+
 .score-card {
     display: grid;
     border: 1px solid black;
@@ -79,4 +79,79 @@ footer {
     height: fit-content;
     align-content: center;
     justify-items: center;
+}
+
+/* Cup shape elements */
+.cup-container {
+    display: grid;
+    justify-items: center;
+}
+.cup-top {
+    width: 50px;
+      height: 12.5px;
+      background: lightyellow;
+      border-radius: 25px / 6.75px;
+      border: 1px solid black;
+      z-index: 10;
+      margin-bottom: -8px;
+      
+}
+.cup-middle {
+    border-bottom: 100px solid lightyellow;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 100px;
+    z-index: 9;
+    
+}
+.cup-bottom {
+    width: 100px;
+    height: 25px;
+    background: lightyellow;
+    border-radius: 50px / 13.5px;
+    border: 1px solid black;
+    z-index: 8;
+    margin-top: -12px;
+
+}
+
+.open-cup-top {
+    width: 50px;
+      height: 12.5px;
+      background: lightyellow;
+      border-radius: 25px / 6.75px;
+      border: 1px solid black;
+      z-index: 8;
+      margin-bottom: -8px;
+}
+
+.open-cup-middle {
+    border-bottom: 100px solid lightyellow;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 100px;
+    z-index: 9;
+}
+
+.open-cup-bottom {
+    width: 100px;
+    height: 25px;
+    background: lightyellow;
+    border-radius: 50px / 13.5px;
+    border: 1px solid black;
+    z-index: 10;
+    margin-top: -12px;
+}
+
+.hidden {
+    display: none;
+}
+.winner {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid black;
+    background-color: brown;
 }
