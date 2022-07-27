@@ -157,14 +157,23 @@ footer {
     display: none;
 }
 .winner {
+    margin-top: -20px;
     width: 50px;
     height: 50px;
     border-radius: 25px;
     border: 1px solid black;
     background-color: brown;
-    z-index: 1;
+    z-index: 11;
 }
-
+.loser {
+    margin-top: -20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background-color: transparent;
+    z-index: 11;
+}
 .hover:hover {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);
