@@ -23,18 +23,23 @@ const buttonOne = document.getElementById('cup-one');
 const buttonTwo = document.getElementById('cup-two');
 const buttonThree = document.getElementById('cup-three');
 const buttonReset = document.getElementById('reset');
+const buttonStart = document.getElementById('start-button');
 
 const correctEl = document.getElementById('correct');
 const wrongEl = document.getElementById('wrong');
 const totalEl = document.getElementById('total');
 
-// const cupOneTwo = document.getElementById('cup-one-two');
+const gameBoard = document.getElementById('game-board');
+const scoreCard = document.getElementById('score-card');
+const instructions = document.getElementById('instructions');
 
 const cups = ['cupOne', 'cupTwo', 'cupThree'];
 
 let correct = 0;
 let wrong = 0;
 let total = 0;
+
+
 
 function getRandomCup() {
     const index = Math.floor(Math.random() * 3);
@@ -60,6 +65,22 @@ function checkGuess(answer, userGuess) {
         wrongEl.textContent = wrong;
     }
 }
+function stopShake(){
+    startCupOne.classList.remove('hover');
+    endCupOne.classList.remove('hover');
+    startCupTwo.classList.remove('hover');
+    endCupTwo.classList.remove('hover');
+    startCupThree.classList.remove('hover');
+    endCupThree.classList.remove('hover');
+}    
+function startShake(){
+    startCupOne.classList.add('hover');
+    endCupOne.classList.add('hover');
+    startCupTwo.classList.add('hover');
+    endCupTwo.classList.add('hover');
+    startCupThree.classList.add('hover');
+    endCupThree.classList.add('hover');
+}
 
 
 function disableButtons() {
@@ -68,12 +89,19 @@ function disableButtons() {
     buttonThree.disabled = true;
 }
 
+buttonStart.addEventListener('click', () => {
+    gameBoard.classList.remove('hidden');
+    scoreCard.classList.remove('hidden');
+    instructions.classList.remove('hidden');
+});
+
 buttonOne.addEventListener('click', () => {
     getRandomCup();
     checkGuess(getRandomCup(), 'cupOne'); 
     startCupOne.classList.add('hidden');
     endCupOne.classList.remove('hidden');
     disableButtons();
+    stopShake();
 });
 buttonTwo.addEventListener('click', () => {
     getRandomCup();
@@ -81,6 +109,7 @@ buttonTwo.addEventListener('click', () => {
     startCupTwo.classList.add('hidden');
     endCupTwo.classList.remove('hidden');
     disableButtons();
+    stopShake();
 });
 buttonThree.addEventListener('click', () => {
     getRandomCup();
@@ -88,8 +117,10 @@ buttonThree.addEventListener('click', () => {
     startCupThree.classList.add('hidden');
     endCupThree.classList.remove('hidden');
     disableButtons();
+    stopShake();
 });
 buttonReset.addEventListener('click', () => {
+    startShake();
     buttonOne.disabled = false;
     buttonTwo.disabled = false;
     buttonThree.disabled = false;
