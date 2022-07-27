@@ -33,10 +33,12 @@ const gameBoard = document.getElementById('game-board');
 const scoreCard = document.getElementById('score-card');
 const instructions = document.getElementById('instructions');
 
+const intro = document.getElementById('intro');
+
 const cups = ['cupOne', 'cupTwo', 'cupThree'];
 
 let correct = 0;
-let wrong = 0;
+// let wrong = 0;
 let total = 0;
 
 
@@ -61,8 +63,18 @@ function checkGuess(answer, userGuess) {
         correct++;
         correctEl.textContent = correct;
     } else {
-        wrong++;
-        wrongEl.textContent = wrong;
+        wrongEl.textContent = total - correct;
+        if (answer === cups[0]) {
+            startCupOne.classList.add('hidden');
+            endCupOne.classList.remove('hidden');
+        } else if (answer === cups[1]) {
+            startCupTwo.classList.add('hidden');
+            endCupTwo.classList.remove('hidden');
+        } else if (answer === cups[2]) {
+            startCupThree.classList.add('hidden');
+            endCupThree.classList.remove('hidden');
+        }
+        
     }
 }
 function stopShake(){
@@ -93,6 +105,7 @@ buttonStart.addEventListener('click', () => {
     gameBoard.classList.remove('hidden');
     scoreCard.classList.remove('hidden');
     instructions.classList.remove('hidden');
+    intro.classList.add('hidden');
 });
 
 buttonOne.addEventListener('click', () => {
