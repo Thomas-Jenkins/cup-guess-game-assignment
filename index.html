@@ -22,7 +22,127 @@
     </header>
 
     <main>
+        <section class="main-board">
+            <div id="intro" class="intro">
+                <div>
+                    Welcome! Care for a game of chance?
+                </div>
+                <div>
+                    <button id="start-button">Start</button>
+                </div>
+            </div>
+            <div id="instructions" class="intro hidden">
+                I've hidden a ball in one of these cups. Choose a cup by clicking on it. Can you get three wins before three losses? <br> The game will reset after every attempt!
+            </div>
+            <div id="game-board" class="game-board hidden">
+                <div class="cup">
+                    <button id="cup-one" class="guess">
+                        <div id="cup-one-two" class="cup-container hover">
+                            
+                            <div class="cup-top">
 
+                            </div>
+                            <div class="cup-middle">
+
+                            </div>
+                            <div class="cup-bottom">
+
+                            </div>
+
+                        </div>
+                        <div id="cup-one-three" class="cup-container hidden hover">
+
+                            <div class="open-cup-top">
+
+                            </div>
+                            <div class="open-cup-middle">
+
+                            </div>
+                            <div class="open-cup-bottom">
+
+                            </div>
+                            <div id="winrar-one" class="winner hidden">
+
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                <div class="cup" >
+                    <button id="cup-two" class="guess">
+                        <div id="cup-two-two" class="cup-container hover">
+                            
+                            <div class="cup-top">
+
+                            </div>
+                            <div class="cup-middle">
+
+                            </div>
+                            <div class="cup-bottom">
+
+                            </div>
+                        </div>
+                        <div id="cup-two-three" class="cup-container hidden hover">
+
+                            <div class="open-cup-top">
+
+                            </div>
+                            <div class="open-cup-middle">
+
+                            </div>
+                            <div class="open-cup-bottom">
+
+                            </div>
+                            <div id="winrar-two" class="winner hidden">
+
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                <div class="cup" >
+                    <button id="cup-three" class="guess">
+                        <div id="cup-three-two" class="cup-container hover">
+                            
+                            <div class="cup-top">
+
+                            </div>
+                            <div class="cup-middle">
+
+                            </div>
+                            <div class="cup-bottom">
+
+                            </div>
+
+                        </div>
+                        <div id="cup-three-three" class="cup-container hidden hover">
+
+                            <div class="open-cup-top">
+
+                            </div>
+                            <div class="open-cup-middle">
+
+                            </div>
+                            <div class="open-cup-bottom">
+
+                            </div>
+                            <div id="winrar-three" class="winner hidden">
+
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                
+            </div>
+            <div id="score-card" class="score-card hidden">
+                <p>You won: <span id="correct">0</span> Times</p>
+                <p>You lost: <span id="wrong">0</span> Times</p>
+                <p>You've Played: <span id="total">0</span> Times</p>
+                <div>
+                    <button id="reset">Reset</button>
+                </div>
+            </div>
+            
+        
+        </section>
     </main>
 
     <footer>&copy;2022 Software Developer</footer>

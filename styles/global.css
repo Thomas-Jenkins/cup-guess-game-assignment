@@ -21,7 +21,7 @@ header {
 }
 
 main {
-    padding: 20px;
+    padding: 20px; 
 }
 
 footer {
@@ -33,3 +33,187 @@ footer {
     justify-content: flex-end;
     background-color: var(--footer-background);
 }
+/* My code after */
+.intro {
+    display: grid;
+    height: fit-content;
+    width: 600px;
+    justify-content: center;
+    justify-items: center;
+    border: 2px solid black;
+    padding: 2px 5px
+}
+#instructions {
+    
+}
+.main-board {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+.game-board {
+    display: grid;
+    height: 250px;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.cup {
+    display: grid;
+    width: 200px;
+    height: 250px;
+    border: 2px solid black;
+    justify-items: center;
+    align-items: center;
+}
+.guess {
+    display: grid;
+    position: absolute;
+    width: 180px;
+    height: 230px;
+    border: none;
+    background-color: aquamarine;
+    align-items: center;
+    justify-items: center;
+}
+
+.score-card {
+    display: grid;
+    border: 1px solid black;
+    border-top: none;
+    width: 200px;
+    height: fit-content;
+    align-content: center;
+    justify-items: center;
+}
+
+/* Cup shape elements */
+.cup-container {
+    display: grid;
+    justify-items: center;
+}
+.cup-top {
+    width: 50px;
+      height: 12.5px;
+      background: lightyellow;
+      border-radius: 25px / 6.75px;
+      border: 1px solid black;
+      z-index: 10;
+      margin-bottom: -8px;
+      
+}
+.cup-middle {
+    border-bottom: 100px solid lightyellow;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 100px;
+    z-index: 9;
+    
+}
+.cup-bottom {
+    width: 100px;
+    height: 25px;
+    background: lightyellow;
+    border-radius: 50px / 13.5px;
+    border: 1px solid black;
+    z-index: 8;
+    margin-top: -12px;
+
+}
+
+.open-cup-top {
+    width: 50px;
+      height: 12.5px;
+      background: lightyellow;
+      border-radius: 25px / 6.75px;
+      border: 1px solid black;
+      z-index: 8;
+      margin-bottom: -8px;
+}
+
+.open-cup-middle {
+    border-bottom: 100px solid lightyellow;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 100px;
+    z-index: 9;
+}
+
+.open-cup-bottom {
+    width: 100px;
+    height: 25px;
+    background: lightyellow;
+    border-radius: 50px / 13.5px;
+    border: 1px solid black;
+    z-index: 10;
+    margin-top: -12px;
+}
+
+.hidden {
+    display: none;
+}
+.winner {
+    margin-top: -20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid black;
+    background-color: brown;
+    z-index: 11;
+}
+.loser {
+    margin-top: -20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background-color: transparent;
+    z-index: 11;
+}
+.hover:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+/*first failed attempt at shaking on hover*/
+/* @keyframe shake {
+0%{
+    transform: translate(0px,0px) rotate(0deg);
+}
+25%{
+    transform: translate(1px,1px) rotate(1deg);
+}
+50%{
+    transform: translate(-1px,-1px) rotate(-1deg);
+}
+75%{
+    transform: translate(2px,-1px) rotate(2deg);
+}
+100%{
+    transform: translate(-1px,1px) rotate(-1deg);
+  }
+} */
