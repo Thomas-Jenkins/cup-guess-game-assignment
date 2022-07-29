@@ -134,6 +134,9 @@ buttonThree.addEventListener('click', () => {
 });
 buttonReset.addEventListener('click', () => {
     startShake();
+    resetStyles();
+});
+function resetStyles() {
     buttonOne.disabled = false;
     buttonTwo.disabled = false;
     buttonThree.disabled = false;
@@ -146,4 +149,4 @@ buttonReset.addEventListener('click', () => {
     ballOne.classList.add('hidden');
     ballTwo.classList.add('hidden');
     ballThree.classList.add('hidden');
-});
+}
